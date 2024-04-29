@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch a gazebo world-->
+<launch>
+
+    <node name="cube_sorting" pkg="cube_sorting_robot" type="find_cube_coordinates.py" output="screen"/>
+
+</launch>

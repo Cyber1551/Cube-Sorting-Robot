@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Launch a gazebo world-->
+<launch>
+    <include file="$(find dobot_gazebo)/launch/gazebo.launch">
+	<arg name="world" value="$(find cube_sorting_robot)/worlds/cube_sorting_12.world"/>
+    </include>
+    <node name="tf_footprint_base" pkg="tf" type="static_transform_publisher" args="0 0 3 0 1.57 0 base_link camera_frame 40" />
+    <node pkg="tf" type="static_transform_publisher" name="gripper_middle_point" args="0 0 0.1 0 0 0 base_link_gripper gripper_touch_pnt 30" />
+    <include file="$(find cube_sorting_robot)/launch/robot_state_publisher.launch">
+    </include>
+</launch>
