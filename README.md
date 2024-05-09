@@ -27,3 +27,12 @@ Requires Ubuntu 20.04 running ROS Noetic
 
 * Add "export DOBOT_TYPE=nova5" to ~/.bashrc file
 * Run *sudo chmod +x control_hand.py find_cube_coordinates.py* inside cube_sorting_robot/src directory to make it an executable 
+
+### Running
+
+* Set world argument in *simulation.launch* file. Available worlds are located in /worlds folder.
+* Run *roslaunch cube_sorting_robot simulation.launch*
+* Run *rosrun cube_sorting_robot control_hand.py*
+* Run *roslaunch cube_sorting_robot cube_sorter.launch*
+
+NOTE: The scripts must be ran in that order due to subscriber connections.
